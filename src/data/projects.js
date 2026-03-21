@@ -17,7 +17,7 @@ export const projects = [
       "Optimized performance and fast loading"
     ],
     live: "YOUR_PORTFOLIO_LINK",
-    github: "YOUR_PORTFOLIO_GITHUB",
+    github: "https://github.com/fellygor/Portfolio-website.git",
     image: PortfolioImg,
   },
   {

@@ -12,7 +12,7 @@ export default function Navbar() {
     setDark(!dark);
     console.log("New state requested:", !dark);
   }
-  const navLinks = ["About", "Skills", "Projects", "Contact"];
+  const navLinks = ["Skills", "Projects", "Contact"];
 
   return (
     <header className="fixed w-full z-50 backdrop-blur-md bg-lightbg/30 dark:bg-darkbg/80 border-b border-border-light dark:border-slate-800 transition-colors duration-300">
