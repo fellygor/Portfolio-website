@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #10b981;    /* Emerald Green */
+  --color-darkbg: #1e293b;     /* Slate Blue/Dark */
+
+  /* Complementary Light Mode Colors */
+  --color-lightbg: #f8fafc;    /* Very light gray-blue for main background */
+  --color-surface: #ffffff;    /* Pure white for cards/modals */
+  --color-text-main: #334155;  /* Deep slate for primary text (readable) */
+  --color-text-muted: #64748b; /* Medium slate for secondary/muted text */
+  --color-border-light: #e2e8f0; /* Soft border color for light mode */
+  
+  /* Accent for Light Mode */
+  --color-accent: #f0fdf4;     /* Very pale green for button backgrounds/hover */
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-lightbg text-text-main transition-colors duration-300;
+}
+
+
