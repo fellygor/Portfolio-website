@@ -71,7 +71,6 @@ npm run dev
 
 <img width="1272" height="672" alt="Portfolio" src="https://github.com/user-attachments/assets/a1da95b1-4217-4fe3-99ea-219c91794ca4" />
 
-https://www.linkedin.com/in/felista-gor-6b52ba157/
 ---
 
 ## 🎯 Purpose
