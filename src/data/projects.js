@@ -11,12 +11,13 @@ export const projects = [
     tech: ["React", "Tailwind CSS", "Framer Motion", "Lucide Icons"],
     features: [
       "Responsive design for mobile, tablet, and desktop",
+      "Dark and Light mode",
       "Smooth animations using Framer Motion",
       "Project showcase with live demo and GitHub links",
       "Clean and accessible UI design",
       "Optimized performance and fast loading"
     ],
-    live: "YOUR_PORTFOLIO_LINK",
+    live: "https://portfolio-website-sigma-jade-97.vercel.app/",
     github: "https://github.com/fellygor/Portfolio-website.git",
     image: PortfolioImg,
   },
@@ -30,8 +31,8 @@ export const projects = [
       "Dynamic Dark Mode: Persists user preference using Local Storage and prefers-color-scheme.",
       "Real-time Task Management: Create, complete, and delete tasks with instant UI updates."
     ],
-    live: "YOUR_POKEDEX_LINK",
-    github: "YOUR_POKEDEX_GITHUB",
+    live: "https://taskflow-nu-nine.vercel.app/",
+    github: "https://github.com/fellygor/Taskflow",
     image: TaskFlow,
   },
   {
@@ -46,8 +47,8 @@ export const projects = [
       "Responsive and user-friendly interface",
       "Error handling for empty or failed searches"
     ],
-    live: "YOUR_BOOKHAVEN_LINK",
-    github: "YOUR_BOOKHAVEN_GITHUB",
+    live: "https://book-haven-sigma.vercel.app/",
+    github: "https://github.com/fellygor/Book-Haven",
     image: BookImg,
   },
   {
