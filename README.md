@@ -6,13 +6,12 @@ This is my personal portfolio website designed to showcase my skills, projects, 
 
 ## 🚀 Live Demo
 
-👉 https://portfolio-website-sigma-jade-97.vercel.app/
+👉 https://felista-gor.vercel.app/
 
 ---
 
 ## ✨ Features
 
-* 🧑‍💻 About Me section highlighting my background and journey
 * 💼 Projects showcase with descriptions and links
 * 🛠️ Skills section covering my technical stack
 * 📱 Fully responsive design (mobile, tablet, desktop)
@@ -89,8 +88,6 @@ Having a portfolio website is essential for developers as it helps demonstrate r
 
 
 * 📬 Contact form integration
-* 🎞️ Animations and transitions
-* 📊 Blog or article section
 
 ---
 
@@ -111,7 +108,7 @@ This project is open-source and available under the MIT License.
 **Felly Gor**
 
 * GitHub: https://github.com/fellygor
-* Portfolio: https://portfolio-website-sigma-jade-97.vercel.app/
+* Portfolio: https://felista-gor.vercel.app/
 * LinkedIn: https://www.linkedin.com/in/felista-gor-6b52ba157/
 
 ---
