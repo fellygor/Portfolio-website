@@ -1,98 +1,169 @@
 import { motion } from "framer-motion";
-import { Download, Mail, Github, Linkedin, ArrowRight } from "lucide-react";
+import {
+  Download,
+  Mail,
+  Github,
+  Linkedin,
+  ArrowRight,
+  MapPin,
+} from "lucide-react";
+
+const socialLinks = [
+  {
+    label: "GitHub",
+    href: "https://github.com/fellygor",
+    icon: Github,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/felista-gor/",
+    icon: Linkedin,
+  },
+  {
+    label: "Email",
+    href: "mailto:your-email@example.com",
+    icon: Mail,
+  },
+];
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-lightbg dark:bg-darkbg">
-      <div className="max-w-5xl mx-auto px-6 py-20 md:py-32">
-        <motion.div 
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+    <section
+      id="home"
+      aria-labelledby="hero-heading"
+      className="min-h-screen flex items-center justify-center bg-lightbg dark:bg-darkbg"
+    >
+      <div className="max-w-5xl mx-auto px-6 py-24 md:py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center"
         >
+          {/* Location */}
+          <div className="inline-flex items-center gap-2 mb-6 text-sm text-text-muted dark:text-gray-400">
+            <MapPin
+              size={15}
+              aria-hidden="true"
+              className="text-primary"
+            />
+            <span>Nairobi, Kenya · Open to remote</span>
+          </div>
 
-          {/* Name & Title */}
-          <h1 className="text-4xl text-text-muted md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
-            Hi, I'm <span className="text-primary">Felista Gor</span>
+          {/* Main heading */}
+          <h1
+            id="hero-heading"
+            className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-text-main dark:text-white"
+          >
+            Hi, I'm{" "}
+            <span className="text-primary">Felista Gor</span>
           </h1>
-          
-          <p className="text-xl md:text-2xl text-text-muted dark:text-gray-300 max-w-2xl mx-auto mb-6">
-            Junior Frontend Developer
+
+          {/* Professional title */}
+          <p className="mt-5 text-xl md:text-2xl font-semibold text-text-muted dark:text-gray-300">
+            Software Developer
           </p>
-          
-          <p className="text-base md:text-lg text-text-muted dark:text-gray-400 max-w-xl mx-auto mb-10">
-            Passionate about building inclusive digital experiences that nurture knowledge and accessibility.
+
+          {/* Introduction */}
+          <p className="mt-6 text-base md:text-lg leading-relaxed text-text-muted dark:text-gray-400 max-w-2xl mx-auto">
+            I build responsive, accessible web interfaces with React,
+            TypeScript, and Tailwind CSS — turning ideas and designs into
+            practical, user-friendly products.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex justify-center gap-4 flex-wrap mb-12">
+          <div className="mt-10 flex justify-center gap-4 flex-wrap">
             <a
               href="#projects"
-              className="bg-primary hover:bg-emerald-600 text-white px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition inline-flex items-center gap-2"
+              className="
+                bg-primary text-white
+                px-6 py-3 rounded-xl
+                shadow-md
+                inline-flex items-center gap-2
+                transition-all duration-200
+                hover:shadow-lg hover:-translate-y-0.5
+                focus:outline-none focus-visible:ring-2
+                focus-visible:ring-primary focus-visible:ring-offset-2
+                dark:focus-visible:ring-offset-darkbg
+              "
             >
-              View Projects
-              <ArrowRight size={18} />
+              <span>View My Work</span>
+              <ArrowRight
+                size={18}
+                aria-hidden="true"
+              />
             </a>
 
             <a
-              href="../../documents/Felista Awuor Gor_Frontend Dev_CV.pdf"
-              download="Felista Awuor Gor_Frontend Dev_CV.pdf"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-xl transition inline-flex items-center gap-2"
+              href="/Felista Awuor Gor_CV.pdf"
+              download="Felista Awuor Gor_CV.pdf"
+              className="
+                border-2 border-primary text-primary
+                px-6 py-3 rounded-xl
+                inline-flex items-center gap-2
+                transition-all duration-200
+                hover:bg-primary hover:text-white
+                hover:-translate-y-0.5
+                focus:outline-none focus-visible:ring-2
+                focus-visible:ring-primary focus-visible:ring-offset-2
+                dark:focus-visible:ring-offset-darkbg
+              "
             >
-              <Download size={18} />
-              Download CV
+              <Download
+                size={18}
+                aria-hidden="true"
+              />
+              <span>Download CV</span>
             </a>
           </div>
 
-          {/* Contact & Social Links */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center gap-6"
+          {/* Social links */}
+          <nav
+            aria-label="Social and contact links"
+            className="mt-8 flex justify-center gap-3"
           >
-            {/* Email Contact */}
-            <a
-              href="mailto:fellygor@gmail.com"
-              className="inline-flex items-center gap-2 text-text-muted dark:text-gray-400 hover:text-primary dark:hover:text-primary transition group"
-            >
-              <Mail size={18} className="group-hover:scale-110 transition" />
-              <span>fellygor@gmail.com</span>
-            </a>
+            {socialLinks.map((link) => {
+              const Icon = link.icon;
 
-            {/* Divider */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-px bg-gray-300 dark:bg-gray-700"></div>
-              <span className="text-sm text-text-muted dark:text-gray-500">Connect with me</span>
-              <div className="w-12 h-px bg-gray-300 dark:bg-gray-700"></div>
-            </div>
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    link.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  aria-label={link.label}
+                  className="
+                    flex items-center justify-center
+                    h-10 w-10 rounded-full
+                    border border-border-light
+                    dark:border-white/10
+                    text-text-muted dark:text-gray-400
+                    transition-all duration-200
+                    hover:text-primary
+                    hover:border-primary/40
+                    hover:-translate-y-0.5
+                    focus:outline-none focus-visible:ring-2
+                    focus-visible:ring-primary
+                  "
+                >
+                  <Icon
+                    size={18}
+                    aria-hidden="true"
+                  />
+                </a>
+              );
+            })}
+          </nav>
 
-            {/* Social Icons */}
-            <div className="flex gap-6">
-              <a
-                href="https://github.com/fellygor"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-muted dark:text-gray-400 hover:text-primary dark:hover:text-primary transition transform hover:scale-110"
-                aria-label="GitHub"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/felista-gor-6b52ba157"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-muted dark:text-gray-400 hover:text-primary dark:hover:text-primary transition transform hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={24} />
-              </a>
-            </div>
-
-          </motion.div>
+          {/* Availability */}
+          <p className="mt-8 text-xs text-text-muted dark:text-gray-500">
+            Open to software development opportunities and collaborative
+            projects.
+          </p>
         </motion.div>
       </div>
     </section>

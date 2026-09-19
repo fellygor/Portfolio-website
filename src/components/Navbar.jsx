@@ -7,18 +7,13 @@ export default function Navbar() {
   const { dark, setDark } = useContext(ThemeContext);
   const [open, setOpen] = useState(false);
 
-  const handleToggle = () => {
-    console.log("Current state:" , dark);
-    setDark(!dark);
-    console.log("New state requested:", !dark);
-  }
-  const navLinks = ["Skills", "Projects", "Contact"];
+  const navLinks = ["Stack", "Projects", "Contact"];
 
   return (
     <header className="fixed w-full z-50 backdrop-blur-md bg-lightbg/30 dark:bg-darkbg/80 border-b border-border-light dark:border-slate-800 transition-colors duration-300">
       <nav className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <a className="text-xl font-bold text-primary hover:opacity-80 transition-opacity" href="#">
-          Felista Gor
+          Felista.Gor
         </a>
 
         <div className="flex items-center gap-4 md:gap-8">
