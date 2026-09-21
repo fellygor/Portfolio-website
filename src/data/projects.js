@@ -29,7 +29,7 @@ export const projects = [
 "Fully responsive layout, including an off-canvas mobile navigation drawer", ""
     ],
     tech:["React", "Vite", "Tailwind CSS", "Chart.js,"], 
-    live: "https://crypto-dashboard.vercel.app/",
+    live: "https://crypto-dashboard-vert-five.vercel.app/",
     github: "https://github.com/fellygor/crypto-dashboard",
     image: CryptoImg,
   },
